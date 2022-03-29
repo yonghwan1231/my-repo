@@ -28,7 +28,7 @@ var itemData = [
 
 $("#wrap").append('<ul class="list">');
 
-$(itemData).each(function(){
+$(itemData).each(function(index,el){
     $(".list").append(
         $("<li>")
             .append(

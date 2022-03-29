@@ -29,8 +29,17 @@ $("#create").on("click", function(){
     today.setSeconds(sec+5);
     var expire = today.toGMTString();
     document.cookie = "today=done; path=/; expires="+expire;
+
 });
 
 $("#check").on("click", function(){
     console.log(document.cookie);
+})
+
+$("#delete").on("click", function(){
+    var today = new Date();
+    var sec = today.getSeconds();
+    today.setSeconds(sec);
+    var expire = today.toGMTString();
+    document.cookie = "today=done; path=/; expires="+expire;
 })
